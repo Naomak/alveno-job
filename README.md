@@ -2,8 +2,6 @@
 
 Soubor `types/supabase.ts` obsahuje typy entit vygenerované z backendu.
 
-API key pro přístup k databázi je uložen v souboru `api.ENV` a je možné jej použít z browseru.
-
 ### Dokumentace API
 
 Read all rows

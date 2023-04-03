@@ -51,3 +51,11 @@ curl -X PATCH 'https://nktebdhspzvpwguqcksn.supabase.co/rest/v1/teams?some_colum
 -H "Prefer: return=minimal" \
 -d '{ "other_column": "otherValue" }'
 ```
+
+Delete matching rows
+
+```Bash
+curl -X DELETE 'https://nktebdhspzvpwguqcksn.supabase.co/rest/v1/teams?some_column=eq.someValue' \
+-H "apikey: SUPABASE_KEY" \
+-H "Authorization: Bearer SUPABASE_KEY"
+```

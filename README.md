@@ -4,6 +4,8 @@ Soubor `types/supabase.ts` obsahuje typy entit vygenerované z backendu.
 
 ### Dokumentace API
 
+Příklady pro `teams`, ale samozřejmě obdobně funguje i pro `employees`.
+
 Read all rows
 
 ```Bash
@@ -56,6 +58,14 @@ Delete matching rows
 
 ```Bash
 curl -X DELETE 'https://nktebdhspzvpwguqcksn.supabase.co/rest/v1/teams?some_column=eq.someValue' \
+-H "apikey: SUPABASE_KEY" \
+-H "Authorization: Bearer SUPABASE_KEY"
+```
+
+Read all teams with employee ids
+
+```Bash
+curl 'https://nktebdhspzvpwguqcksn.supabase.co/rest/v1/teams?select=*,emnployees(id)' \
 -H "apikey: SUPABASE_KEY" \
 -H "Authorization: Bearer SUPABASE_KEY"
 ```

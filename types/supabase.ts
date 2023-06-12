@@ -15,6 +15,7 @@ export interface Database {
           endDate: string | null
           id: string
           name: string
+          position: string | null
           startDate: string | null
           surname: string
           team: string | null
@@ -24,6 +25,7 @@ export interface Database {
           endDate?: string | null
           id?: string
           name: string
+          position?: string | null
           startDate?: string | null
           surname: string
           team?: string | null
@@ -33,10 +35,19 @@ export interface Database {
           endDate?: string | null
           id?: string
           name?: string
+          position?: string | null
           startDate?: string | null
           surname?: string
           team?: string | null
         }
+        Relationships: [
+          {
+            foreignKeyName: "employees_team_fkey"
+            columns: ["team"]
+            referencedRelation: "teams"
+            referencedColumns: ["id"]
+          }
+        ]
       }
       teams: {
         Row: {
@@ -57,6 +68,7 @@ export interface Database {
           name?: string | null
           parentTeam?: string | null
         }
+        Relationships: []
       }
     }
     Views: {
